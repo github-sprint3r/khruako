@@ -16,3 +16,4 @@ Servers/*
 .metadata
 .project
 .DS_Store
+/build
