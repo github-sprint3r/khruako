@@ -31,10 +31,13 @@ Rule for click reserve button
 
 *** Keywords ***
 
+Click get table id
+	Click button    get_table
 Click reserve button
     [Arguments]    ${table_id}    ${expected_result}
 
     Open Browser    ${HOME_URL}
+    Click get table id
     Click Button    ${table_id}
     I should see result    ${expected_result}
     [Teardown]   Close Browser
