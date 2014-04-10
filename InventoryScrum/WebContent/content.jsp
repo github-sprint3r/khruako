@@ -1,6 +1,10 @@
-<!-- CONTENT -->
+<!-- CONTIANER CONTENT -->
       <div class="col-sm-8">
+
+        <!-- ALERT -->
         <div class="alert alert-success"><h4>Well done!</h4> You successfully read this important alert message.</div>
+
+        <!-- CONTENT -->
         <div class="font-color-gray">
           <p>
             <ul class="list-group">
@@ -34,6 +38,5 @@
             </ul>
           </p>
         </div>
-      </div>
-
+      </div> <!-- END CONTENT -->
     </div>
