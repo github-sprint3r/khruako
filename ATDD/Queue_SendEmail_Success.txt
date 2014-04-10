@@ -8,21 +8,21 @@ ${HOME_URL}     http://119.59.97.10/khruako/notify.jsp
 *** Test Cases ***
 Rule select table
 	[Template]   Flow Select TableNo
-    #---------------------#
-    # TableNo  | ButtonNo #
-    #---------------------#
-	   2-1		 b201
-	   4-01		 b401
-	   10-01	  b1001
+    #------------------------------#
+    # TableNo  | ButtonNo | E-mail #
+    #------------------------------#
+	   2-1		 b201    kobnaow@gmail.com
+	   4-01		 b401    legolus_auy@hotmail.com
+	   10-01	  b1001    itim@outlook.com
 
 
 *** Keywords ***
 Flow Select TableNo
-	[Arguments]   ${tableNo}    ${btnNo} 
+	[Arguments]   ${tableNo}    ${btnNo}    ${email}
 	Open browser to home page
-	Fill in Email   kobnaow@gmail.com
+	Fill in Email   ${email}
 	Choose table  ${tableNo}     ${btnNo} 
-	I should see result   Success
+	I should see result   SUCCESS
 	[Teardown]   Close Browser
 
 
