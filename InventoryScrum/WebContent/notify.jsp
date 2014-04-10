@@ -66,7 +66,7 @@
 
 <div class="col-md-9">
 	<h3>ส่ง Email หาลูกค้า เมื่อถึงคิว</h3>
-		<form method="get" class="form-horizontal well col-md-12" action="result.html" role="form" id="frmSendEmail">
+		<form method="post" class="form-horizontal well col-md-12" action="/InventoryScrum/EmailSenderServlet" role="form" id="frmSendEmail">
 			<div class="col-md-9 col-md-offset-1">
 				<div class="form-group">
 					<div class="col-md-4 text-right">

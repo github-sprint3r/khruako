@@ -36,4 +36,13 @@
     <servlet-name>AdminServlet</servlet-name>
     <url-pattern>/servlet/AdminServlet</url-pattern>
   </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>EmailSenderServlet</servlet-name>
+  	<url-pattern>/EmailSenderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>EmailSenderServlet</servlet-name>
+  	<servlet-class>EmailSenderServlet</servlet-class>
+  </servlet>
 </web-app>

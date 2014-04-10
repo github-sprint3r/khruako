@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class EmailSenderServlet
  */
-@WebServlet("/InventoryScrum/EmailSenderServlet")
+@WebServlet("/EmailSenderServlet")
 public class EmailSenderServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
