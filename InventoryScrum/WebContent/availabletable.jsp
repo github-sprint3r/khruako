@@ -1,7 +1,7 @@
 <%@page import="javax.management.modelmbean.RequiredModelMBean"%>
 <%@page import="com.reserve.database.model.TableData"%>
 <%@page import="java.util.ArrayList"%>
-<%@ include file="header.html"%>
+<%@ include file="header.jsp"%>
 
 <!-- CONTENT -->
 <div class="col-sm-8">
@@ -55,4 +55,4 @@
 </script>
 
 
-<%@ include file="footer.html"%>
+<%@ include file="footer.jsp"%>
