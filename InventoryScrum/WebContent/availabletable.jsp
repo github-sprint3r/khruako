@@ -19,14 +19,14 @@
 			<li class="list-group-item">
 				<button id="reserve-button-1" type="button"
 					class="btn btn-default btn-lg pull-right reserve-button">
-					<a href="./GetAvailableTable">โชว์โต๊ะว่าง</a>
+					<a id="get_table" href="./GetAvailableTable">โชว์โต๊ะว่าง</a>
 				</button>
 			</li>
 			<li>
 		<%
 				ArrayList<TableData> tableList = (ArrayList<TableData>)request.getAttribute("table_list");
-					            
-					             for(TableData table : tableList) {
+				if(tableList != null) {
+					 for(TableData table : tableList) {
 			%>
 			<div class="panel panel-default">
 				<div class="panel-body">
@@ -40,6 +40,7 @@
 				</div>
 			</div>
 			<%
+					}
 				}
 			%>
 			</li>
