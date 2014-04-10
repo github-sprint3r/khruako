@@ -9,6 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import javax.management.modelmbean.RequiredModelMBean;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -29,7 +30,6 @@ public class ReserveTable extends HttpServlet {
 	 */
 	public ReserveTable() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	/**
@@ -80,5 +80,11 @@ public class ReserveTable extends HttpServlet {
 		}
 
 		dbHelper.close();
+
+		// Set attributes for JSP.
+		request.setAttribute("reserveCode", reserveCode);
+		request.setAttribute("diningTableId", diningTableId);
+
+		getServletContext().getRequestDispatcher("/availabletable.jsp").forward(request, response);
 	}
 }
