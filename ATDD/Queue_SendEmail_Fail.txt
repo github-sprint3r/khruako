@@ -1,0 +1,52 @@
+*** Settings ***
+Library        	Selenium2Library
+#Test Teardown	Close Browser
+
+*** Variables ***
+${HOME_URL}     http://icnb1202012/Spartan/
+
+*** Test Cases ***
+Validate format E-mail
+	Open browser to home page
+	Fill in Email   aaa
+	Choose table  2-1
+	Alert Should Be Present  Email ไม่ถูกต้อง
+	[Teardown]   Close Browser
+
+Validate E-mail none
+	Open browser to home page
+	Choose table  4-1
+	Alert Should Be Present   กรุณากรอก Email
+	[Teardown]   Close Browser
+
+Validate Table
+	Open browser to home page
+	Fill in Email   kobnaow@gmail.com
+	Click Button    btnSendEmail
+	Alert Should Be Present    กรุณาเลือกโต๊ะ
+	[Teardown]   Close Browser
+
+*** Keywords ***
+Choose table
+	[Arguments]  ${tableNo}
+	Click Button    b201
+	Click Button    btnSendEmail
+
+Open browser to home page
+	Open Browser    ${HOME_URL}
+	Maximize Browser Window
+	#Title Should Be  Demo Web :: Grade Converter
+
+Fill in Email
+	[Arguments]  ${email}
+	Input Text    Email    ${email}
+
+Fill in TableNo
+	[Arguments]  ${tableNo}
+	Input Text    TableNo    ${tableNo}
+	Click Button    btnSendEmail
+
+I should see result
+	[Arguments]  ${expected_result}
+	Wait Until Page Contains    ${expected_result}
+	

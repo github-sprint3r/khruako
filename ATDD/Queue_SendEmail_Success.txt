@@ -1,0 +1,48 @@
+*** Settings ***
+Library        	Selenium2Library
+#Test Teardown	Close Browser
+
+*** Variables ***
+${HOME_URL}     http://icnb1202012/Spartan/
+
+*** Test Cases ***
+Send Email to Gmail and TableNo 2-1
+	Open browser to home page
+	Fill in Email   kobnaow@gmail.com
+	Fill in Tableno  2-1  
+	I should see result   Success
+	[Teardown]   Close Browser
+
+Send Email to Hotmail and TableNo 4-1
+	Open browser to home page
+	Fill in Email  legolus_auy@hotmail.com
+	Fill in TableNo  4-1
+	I should see result   Success
+	[Teardown]   Close Browser
+
+Send Email to Outlook and TableNo 10-1
+	Open browser to home page
+	Fill in Email   itim@outlook.com
+	Fill in TableNo  10-1
+	I should see result   Success
+	[Teardown]   Close Browser
+
+*** Keywords ***
+Open browser to home page
+	Open Browser    ${HOME_URL}
+	Maximize Browser Window
+	#Title Should Be  Demo Web :: Grade Converter
+
+Fill in Email
+	[Arguments]  ${email}
+	Input Text    Email    ${email}
+
+Fill in TableNo
+	[Arguments]  ${tableNo}
+	Input Text    TableNo    ${tableNo}
+	Click Button    btnSendEmail
+
+I should see result
+	[Arguments]  ${expected_result}
+	Wait Until Page Contains    ${expected_result}
+	
