@@ -1,0 +1,72 @@
+*** Settings ***
+Library        	Selenium2Library
+#Test Teardown	Close Browser
+
+*** Variables ***
+${Addtable_URL}     http://119.59.97.10/khruako/managetable.jsp
+
+
+*** Test Cases ***
+Add table 2-seat new number
+	Open browser to addtable page
+	Fill in table name  2-11
+	Select type of seat  2
+	Submit form new table
+	I should see result  2-11
+ 	[Teardown]   Close Browser
+
+Add table 4-seat new number
+	Open browser to addtable page
+	Fill in table name  4-6
+	Select type of seat  4
+	Submit form new table
+	I should see result  4-6
+ 	[Teardown]   Close Browser
+
+Add table 10-seat new number
+	Open browser to addtable page
+	Fill in table name  10-3
+	Select type of seat  10
+	Submit form new table
+	I should see result  10-3
+ 	[Teardown]   Close Browser
+ 	
+Add table 2-seat wrong number
+	Open browser to addtable page
+	Fill in table name  หวานใจ
+	Select type of seat  2
+	Submit form new table
+	I should see error  หวานใจ ไม่ถูกต้อง
+ 	[Teardown]   Close Browser
+
+Add table 2-seat Same number
+	Open browser to addtable page
+	Fill in table name  2-1
+	Select type of seat  2
+	Submit form new table
+	I should see error  2-1 ซ้ำกับที่มีอยู่
+ 	[Teardown]   Close Browser
+
+*** Keywords ***
+Open browser to addtable page
+    Open Browser    ${Addtable_URL}
+
+Fill in table name
+	[Arguments]  ${tableName}
+	Input Text    table_name    ${tableName}
+
+Select type of seat
+	[Arguments]  ${seat}
+	Select From List  seat  ${seat}
+
+Submit form new table
+	Click Button  submit_table
+
+I should see result
+	[Arguments]  ${expected_result}
+	Wait Until Page Contains    ${expected_result}
+
+I should see error
+	[Arguments]  ${error_result}
+	Wait Until Page Contains    ${error_result}
+	Click Button  Close_Dialog
