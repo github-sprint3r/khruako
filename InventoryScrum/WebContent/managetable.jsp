@@ -66,7 +66,6 @@
 
       <!-- CONTENT -->
       <div class="col-sm-8">
-        <div class="alert alert-success"><h4>Well done!</h4> You successfully read this important alert message.</div>
         <div class="font-color-gray">
           <p>
             </p><ul class="list-group">

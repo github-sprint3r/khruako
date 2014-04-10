@@ -1,0 +1,44 @@
+*** Settings ***
+Library        	Selenium2Library
+#Test Teardown	Close Browser
+
+*** Variables ***
+${HOME_URL}     http://119.59.97.10/khruako/availabletable.jsp
+
+*** Test Cases ***
+
+Rule for click reserve button
+    [Template]    Click reserve button
+    #--------------------------------#
+    # TableId            |  Result #
+    #--------------------------------#
+       reserve-button-1		 Success
+       reserve-button-2		 Success
+       reserve-button-3		 Success
+       reserve-button-4		 Success
+       reserve-button-5		 Succes
+       reserve-button-6		 Success
+       reserve-button-7		 Success
+       reserve-button-8		 Success
+       reserve-button-9		 Success
+       reserve-button-10		 Success
+       reserve-button-11		 Success
+       reserve-button-12		 Success
+       reserve-button-13		 Success
+       reserve-button-14		 Success
+       reserve-button-15		 Success
+       reserve-button-16		 Success
+
+*** Keywords ***
+
+Click reserve button
+    [Arguments]    ${table_id}    ${expected_result}
+
+    Open Browser    ${HOME_URL}
+    Click Button    ${table_id}
+    I should see result    ${expected_result}
+    [Teardown]   Close Browser
+
+I should see result
+	[Arguments]    ${expected_result}
+	Wait Until Page Contains    ${expected_result}
