@@ -1,3 +1,5 @@
+<%@ page contentType="text/html; charset=utf-8" language="java"
+	import="java.sql.*" errorPage=""%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,6 +11,8 @@
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="bootstrap/css/khruako.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
   </head>
   <body>
 
@@ -59,27 +63,3 @@
         </div>
 
       </div>
-
-      <!-- CONTENT -->
-      <div class="col-sm-8">
-        <div class="alert alert-success"><h4>Well done!</h4> You successfully read this important alert message.</div>
-        <div class="font-color-gray">
-          <p>
-            <ul class="list-group">
-              <li class="list-group-item">
-                <h3>Lorem ipsum</h3>
-              </li>
-              <li class="list-group-item">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus viverra nisl quis laoreet. Cras ultrices sodales pretium. Aenean eu consectetur neque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam nisl sapien, commodo in est vel, consectetur imperdiet sem. Donec et purus vitae turpis tincidunt fringilla. Duis non neque eros. Quisque laoreet, mi sit amet tincidunt lobortis, nibh purus pulvinar massa, hendrerit tincidunt sapien lorem ac lorem. Pellentesque nisl dui, porta eu est sed, suscipit luctus tortor. Phasellus id dui risus.
-              </li>
-            </ul>
-          </p>
-        </div>
-      </div>
-
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-  </body>
-</html>
