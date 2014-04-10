@@ -1,0 +1,69 @@
+*** Settings ***
+Library        	Selenium2Library
+#Test Teardown	Close Browser
+
+*** Variables ***
+${HOME_URL}     http://119.59.97.10/managemenucreate.jsp
+
+*** Test Cases ***
+Check lenght nameTh less than 10
+	Open browser to home page
+	Fill in menu name กระเพรา
+	I should see result ต้องใส่ชื่อไม่น้อยกว่า 10 ตัวอักษร
+	[Teardown]   Close Browser	
+
+Check lenght nameTh more than 140	
+	Open browser to home page
+	Fill in menu name ฉันกินผัดกระเพราหมูไก่ผัดเม็ดเม็ดผัดไก่หิมะม่วงปลากกระพงนึ่งมะนาวสปาเก็ตตี้ซีฟู้ดข้าวเหนียวมะม่วงผัดกระเพราหมูไก่ผัดเม็ดเม็ดผัดไก่หิมะม่วงปลากกระพงนึ่งมะนาวสปาเก็ตตี้ซีฟู้ด ข้าวเหนียวมะม่วงผัดกระเพราหมูไก่ผัดเม็ดเม็ดผัดไก่หิมะม่วงปลากกระพงนึ่งมะนาวสปาเก็ตตี้ซีฟู้ด ข้าวเหนียวมะม่วงผัดกระเพราหมูไก่ผัดเม็ดเม็ดผัดไก่หิมะม่วงปลากกระพงนึ่งมะนาวสปาเก็ตตี้ซีฟู้ด ข้าวเหนียวมะม่วงผัดกระเพราหมูไก่ผัดเม็ดเม็ดผัดไก่หิมะม่วงปลากกระพงนึ่งมะนาวสปาเก็ตตี้ซีฟู้ด ข้าวเหนียวมะม่วงผัดกระเพราหมูไก่ผัดเม็ดเม็ดผัดไก่หิมะม่วงปลากกระพงนึ่งมะนาวสปาเก็ตตี้ซีฟู้ด ข้าวเหนียวมะม่วง
+	I should see result ต้องใส่ชื่อไม่เกิน 140 ตัวอักษร
+	[Teardown]   Close Browser		
+
+Check lenght nameEn less than 10
+	Open browser to home page
+	Fill in menu name กระเพรา
+	I should see result ต้องใส่ชื่อไม่น้อยกว่า 10 ตัวอักษร
+	[Teardown]   Close Browser	
+
+Check lenght nameEn more than 140
+	Open browser to home page
+	Fill in menu name ฉันกินผัดกระเพราหมูไก่ผัดเม็ดเม็ดผัดไก่หิมะม่วงปลากกระพงนึ่งมะนาวสปาเก็ตตี้ซีฟู้ดข้าวเหนียวมะม่วงผัดกระเพราหมูไก่ผัดเม็ดเม็ดผัดไก่หิมะม่วงปลากกระพงนึ่งมะนาวสปาเก็ตตี้ซีฟู้ด ข้าวเหนียวมะม่วงผัดกระเพราหมูไก่ผัดเม็ดเม็ดผัดไก่หิมะม่วงปลากกระพงนึ่งมะนาวสปาเก็ตตี้ซีฟู้ด ข้าวเหนียวมะม่วงผัดกระเพราหมูไก่ผัดเม็ดเม็ดผัดไก่หิมะม่วงปลากกระพงนึ่งมะนาวสปาเก็ตตี้ซีฟู้ด ข้าวเหนียวมะม่วงผัดกระเพราหมูไก่ผัดเม็ดเม็ดผัดไก่หิมะม่วงปลากกระพงนึ่งมะนาวสปาเก็ตตี้ซีฟู้ด ข้าวเหนียวมะม่วงผัดกระเพราหมูไก่ผัดเม็ดเม็ดผัดไก่หิมะม่วงปลากกระพงนึ่งมะนาวสปาเก็ตตี้ซีฟู้ด ข้าวเหนียวมะม่วง
+	I should see result ต้องใส่ชื่อไม่เกิน 140 ตัวอักษร
+	[Teardown]   Close Browser	
+
+Check price positive value
+	Open browser to home page
+	Fill in menu price 1
+	I should see result 1
+	[Teardown]   Close Browser	
+
+Check price negative value
+	Open browser to home page
+	Fill in menu price -1
+	I should see result กรุณากรอกค่าจำนวนบวกเท่านั้น
+	[Teardown]   Close Browser	
+
+*** Keywords ***
+Open browser to home page
+	Open Browser    ${HOME_URL}
+	Maximize Browser Window
+	Title Should Be  Khrugu :: Menu Management
+
+Fill in menu nameTh
+	[Arguments]  ${nameTh}
+	Input Text    score    ${nameTh}
+	Click Button    convert
+
+Fill in menu nameEn
+	[Arguments]  ${nameEn}
+	Input Text    score    ${nameEn}
+	Click Button    convert
+
+Fill in menu price
+	[Arguments]  ${price}
+	Input Text    score    ${price}
+	Click Button    convert
+
+I should see result
+	[Arguments]  ${expectedResult}
+	Wait Until Page Contains    ${expectedResult}
+	
