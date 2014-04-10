@@ -1,3 +1,5 @@
+<%@ page contentType="text/html; charset=utf-8" language="java"
+	import="java.sql.*" errorPage=""%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,6 +11,8 @@
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="bootstrap/css/khruako.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
   </head>
   <body>
 
@@ -42,13 +46,13 @@
           <button type="button" class="btn btn-default font-color-gray" onclick="location.href='availabletable.jsp'"> โทรจองโต๊ะ
             <span class="glyphicon glyphicon-chevron-right pull-right"></span>
           </button>
-          <button type="button" class="btn btn-default font-color-gray" onclick="location.href='reservetable.jsp'"> การจัดการโต๊ะ
+          <button type="button" class="btn btn-default font-color-gray"> การจัดการโต๊ะ
             <span class="glyphicon glyphicon-chevron-right pull-right"></span>
           </button>
-          <button type="button" class="btn btn-default font-color-gray" onclick="location.href='managemenucreate.jsp'"> การจัดการเมนู
-            <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+          <button type="button" class="btn btn-default font-color-gray"> การจัดการเมนู
+            <span class="glyphicon glyphicon-chevron-right pull-right" onclick="location.href='managemenu.jsp'"></span>
           </button>
-          <button type="button" class="btn btn-default font-color-gray" onclick="location.href='inventory.jsp'"> Inventory
+          <button type="button" class="btn btn-default font-color-gray"> Inventory
             <span class="glyphicon glyphicon-chevron-right pull-right"></span>
           </button>
         </div>
@@ -65,17 +69,35 @@
         <div class="alert alert-success"><h4>Well done!</h4> You successfully read this important alert message.</div>
         <div class="font-color-gray">
           <p>
-            <ul class="list-group">
+            </p><ul class="list-group">
               <li class="list-group-item">
+                <h3>เพิ่มโต๊ะ</h3>
+              </li>
+              <li class="list-group-item">
+
+            <form action="http://119.59.97.10/khruako/viewtable.jsp">
+
+
+                    หมายเลขโต๊ะ :: 
+
+                <input id="table_name" type="text" name="table_name"></input>
+            </br>
+          </br>
+            จำนวนที่นั่ง ::
+                <select id="seat" name="seat">
+                <option value="2">2</option>
+                <option value="4">4</option>
+                <option value="6">6</option>
+                <option value="10">10</option>
+                <option value="12">12</option>
+                </select> 
+          </br>
+          </br>
+                <input class="btn btn-default" type="submit" value="สร้างโต๊ะ" name="submit_table" id="submit_table"></input>
+            </form>
               </li>
             </ul>
-          </p>
+          <p></p>
         </div>
       </div>
-
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-  </body>
-</html>
+<%@ include file="/footer.jsp" %>

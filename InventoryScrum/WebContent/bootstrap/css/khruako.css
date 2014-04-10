@@ -42,6 +42,15 @@ body {
 margin-bottom: 15px;
 }
 
+.alert h4{
+color: #BF0E26;
+}
+
+.alert-success {
+background-color: #D0FFA3;
+color:111;
+}
+
 /* Content */
 .content {
   padding: 15px;

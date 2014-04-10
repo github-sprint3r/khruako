@@ -1,0 +1,46 @@
+*** Settings ***
+Library        	Selenium2Library
+Test Teardown	Close Browser
+
+*** Variables ***
+${HOME_URL}     http://http://119.59.97.10/khruako/inventory.jsp
+
+*** Test Cases ***
+Input Inventory Data
+	Open browser to home page
+	Fill in StockName    หมู
+	Fill in SupplierName    ซีพี
+	Fill in InputQty    200
+	Fill in MinQty    50
+	Fill in UnitName    กรัม
+	Submit Input Form
+	[Teardown]    Close Browser
+
+*** Keywords ***
+Open browser to home page
+	Open Browser    ${HOME_URL}
+	Maximize Browser Window
+
+Fill in StockName
+	[Arguments]    ${stockname}
+	Input Text    stockname    ${stockname}
+
+Fill in SupplierName
+	[Arguments]    ${suppliername}
+	Input Text    suppliername    ${suppliername}
+
+
+Fill in InputQty
+	[Arguments]    ${inputqty}
+	Input Text    inputqty    ${inputqty}
+
+Fill in MinQty
+	[Arguments]    ${minqty}
+	Input Text    minqty    ${minqty}
+
+Fill in UnitName
+	[Arguments]    ${unitname}
+	Input Text    unitname    ${unitname}
+
+Submit Input Form
+    Click Button    submit

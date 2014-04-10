@@ -1,3 +1,5 @@
+<%@ page contentType="text/html; charset=utf-8" language="java"
+	import="java.sql.*" errorPage=""%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,6 +11,8 @@
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="bootstrap/css/khruako.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
   </head>
   <body>
 
@@ -59,23 +63,3 @@
         </div>
 
       </div>
-
-      <!-- CONTENT -->
-      <div class="col-sm-8">
-        <div class="alert alert-success"><h4>Well done!</h4> You successfully read this important alert message.</div>
-        <div class="font-color-gray">
-          <p>
-            <ul class="list-group">
-              <li class="list-group-item">
-              </li>
-            </ul>
-          </p>
-        </div>
-      </div>
-
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-  </body>
-</html>

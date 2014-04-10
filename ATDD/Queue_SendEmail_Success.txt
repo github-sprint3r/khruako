@@ -1,0 +1,56 @@
+*** Settings ***
+Library        	Selenium2Library
+#Test Teardown	Close Browser
+
+*** Variables ***
+${HOME_URL}     http://119.59.97.10/khruako/notify.jsp
+
+*** Test Cases ***
+Rule select table
+	[Template]   Flow Select TableNo
+    #------------------------------#
+    # TableNo  | ButtonNo | E-mail #
+    #------------------------------#
+	   2-1		 b201    kobnaow@gmail.com
+	   4-01		 b401    legolus_auy@hotmail.com
+	   10-01	  b1001    itim@outlook.com
+
+
+*** Keywords ***
+Flow Select TableNo
+	[Arguments]   ${tableNo}    ${btnNo}    ${email}
+	Open browser to home page
+	Fill in Email   ${email}
+	Fill in Queue    1
+	Choose table  ${tableNo}     ${btnNo}
+	I should see result   SUCCESS
+	[Teardown]   Close Browser
+
+
+Choose table
+	[Arguments]  ${tableNo}   ${btnNo}
+	Click Button    ${btnNo}
+	Click Button    btnSendEmail
+
+Open browser to home page
+	Open Browser    ${HOME_URL}
+	Maximize Browser Window
+	#Title Should Be  Demo Web :: Grade Converter
+
+Fill in Email
+	[Arguments]  ${email}
+	Input Text    Email    ${email}
+
+Fill in Queue
+	[Arguments]  ${Queue}
+	Input Text    Queue    ${Queue}
+
+Fill in TableNo
+	[Arguments]  ${tableNo}
+	Input Text    TableNo    ${tableNo}
+	Click Button    btnSendEmail
+
+I should see result
+	[Arguments]  ${expected_result}
+	Wait Until Page Contains    ${expected_result}
+	

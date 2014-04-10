@@ -1,3 +1,5 @@
+<%@ page contentType="text/html; charset=utf-8" language="java"
+	import="java.sql.*" errorPage=""%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,6 +11,8 @@
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="bootstrap/css/khruako.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
   </head>
   <body>
 
@@ -42,13 +46,13 @@
           <button type="button" class="btn btn-default font-color-gray" onclick="location.href='availabletable.jsp'"> โทรจองโต๊ะ
             <span class="glyphicon glyphicon-chevron-right pull-right"></span>
           </button>
-          <button type="button" class="btn btn-default font-color-gray" onclick="location.href='reservetable.jsp'"> การจัดการโต๊ะ
+          <button type="button" class="btn btn-default font-color-gray"> การจัดการโต๊ะ
             <span class="glyphicon glyphicon-chevron-right pull-right"></span>
           </button>
-          <button type="button" class="btn btn-default font-color-gray" onclick="location.href='managemenucreate.jsp'"> การจัดการเมนู
-            <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+          <button type="button" class="btn btn-default font-color-gray"> การจัดการเมนู
+            <span class="glyphicon glyphicon-chevron-right pull-right" onclick="location.href='managemenu.jsp'"></span>
           </button>
-          <button type="button" class="btn btn-default font-color-gray" onclick="location.href='inventory.jsp'"> Inventory
+          <button type="button" class="btn btn-default font-color-gray"> Inventory
             <span class="glyphicon glyphicon-chevron-right pull-right"></span>
           </button>
         </div>
@@ -60,22 +64,63 @@
 
       </div>
 
-      <!-- CONTENT -->
+    <!-- CONTENT -->
       <div class="col-sm-8">
         <div class="alert alert-success"><h4>Well done!</h4> You successfully read this important alert message.</div>
         <div class="font-color-gray">
           <p>
-            <ul class="list-group">
+            </p><ul class="list-group">
               <li class="list-group-item">
+                <h3>การจัดการโต๊ะ</h3>
+              </li>
+              <li class="list-group-item">
+                <label>โต๊ะขนาด 2 ที่นั่ง</label>
+                <ul>
+                  <li>2-1</li>
+                  <li>2-2</li>
+                  <li>2-3</li>
+                  <li>2-4</li>
+                  <li>2-5</li>
+                  <li>2-6</li>
+                  <li>2-7</li>
+                  <li>2-8</li>
+                  <li>2-9</li>
+                  <li>2-10</li>
+                </ul>
+              </li>
+              <li class="list-group-item">
+                <label>โต๊ะขนาด 4 ที่นั่ง</label>
+                <ul>
+                  <li>4-1</li>
+                  <li>4-2</li>
+                  <li>4-3</li>
+                  <li>4-4</li>
+                  <li>4-5</li>
+                </ul>
+              </li>
+              <li class="list-group-item">
+                <label>โต๊ะขนาด 6 ที่นั่ง</label>
+              </li>
+              <li class="list-group-item">
+                <label>โต๊ะขนาด 8 ที่นั่ง</label>
+              </li>
+              <li class="list-group-item">
+                <label>โต๊ะขนาด 10 ที่นั่ง</label>
+                <ul>
+                  <li>10-1</li>
+                  <li>10-2</li>
+                </ul>
+              </li>
+              <li class="list-group-item">
+                <label>โต๊ะขนาด 12 ที่นั่ง</label>
               </li>
             </ul>
-          </p>
+          <p></p>
         </div>
       </div>
+</div>
+<%@ page contentType="text/html; charset=utf-8" language="java"
+	import="java.sql.*" errorPage=""%>
 
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
