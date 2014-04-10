@@ -21,7 +21,8 @@ Flow Select TableNo
 	[Arguments]   ${tableNo}    ${btnNo}    ${email}
 	Open browser to home page
 	Fill in Email   ${email}
-	Choose table  ${tableNo}     ${btnNo} 
+	Fill in Queue    1
+	Choose table  ${tableNo}     ${btnNo}
 	I should see result   SUCCESS
 	[Teardown]   Close Browser
 
@@ -39,6 +40,10 @@ Open browser to home page
 Fill in Email
 	[Arguments]  ${email}
 	Input Text    Email    ${email}
+
+Fill in Queue
+	[Arguments]  ${Queue}
+	Input Text    Queue    ${Queue}
 
 Fill in TableNo
 	[Arguments]  ${tableNo}

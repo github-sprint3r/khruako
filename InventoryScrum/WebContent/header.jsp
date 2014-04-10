@@ -40,7 +40,7 @@
 
         <!-- MENU -->
         <div class="btn-group-vertical btn-block sidebar-menu">
-          <button type="button" class="btn btn-default font-color-gray"> Queue Notification
+          <button type="button" class="btn btn-default font-color-gray" onclick="location.href='notify.jsp'"> Queue Notification
             <span class="glyphicon glyphicon-chevron-right pull-right"></span>
           </button>
           <button type="button" class="btn btn-default font-color-gray"> Reserve Table
