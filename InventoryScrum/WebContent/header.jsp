@@ -50,7 +50,7 @@
             <span class="glyphicon glyphicon-chevron-right pull-right"></span>
           </button>
           <button type="button" class="btn btn-default font-color-gray"> การจัดการเมนู
-            <span class="glyphicon glyphicon-chevron-right pull-right" onclick="location.href='managemenu.jsp'"></span>
+            <span class="glyphicon glyphicon-chevron-right pull-right" onclick="location.href='managemenucreate.jsp'"></span>
           </button>
           <button type="button" class="btn btn-default font-color-gray"> Inventory
             <span class="glyphicon glyphicon-chevron-right pull-right"></span>
