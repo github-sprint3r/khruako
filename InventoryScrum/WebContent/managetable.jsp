@@ -74,7 +74,7 @@
               </li>
               <li class="list-group-item">
 
-            <form action="http://119.59.97.10/khruako/SaveTable">
+            <form action="http://119.59.97.10/khruako/SaveTable" method="post">
 
 
                     หมายเลขโต๊ะ :: 
