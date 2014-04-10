@@ -120,7 +120,7 @@ public class SaveTable extends HttpServlet {
 			int numRowsChanged = pst.executeUpdate();
 			if (numRowsChanged != 0) {
 				out.println("<br>Record has been inserted");
-				response.sendRedirect("viewtable.jsp");
+				response.sendRedirect("/viewtable.jsp");
 			} else {
 				out.println("failed to insert the data");
 			}
