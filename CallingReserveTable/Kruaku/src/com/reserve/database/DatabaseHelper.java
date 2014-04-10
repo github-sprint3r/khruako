@@ -9,10 +9,12 @@ public class DatabaseHelper {
 	public static final String HOST = "localhost";
 	public static final int PORT = 5432;
 	public static final String DATABASE_NAME = "sample";
+	public static final String DATABASE_USERNAME = "postgres";
+	public static final String DATABASE_PASSWORD = "password";
 
 	private static DatabaseHelper mInstance;
 	private String connectionURL = "jdbc:postgresql://" + HOST + ":" + PORT
-			+ "/sample";
+			+ "/" + DATABASE_NAME;
 	private Connection mConnection;
 
 	public Connection getConnection() {
@@ -38,7 +40,7 @@ public class DatabaseHelper {
 
 			// Get a Connection to the database
 			mConnection = DriverManager.getConnection(connectionURL,
-					"postgres", "password");
+					DATABASE_USERNAME, DATABASE_PASSWORD);
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
