@@ -43,14 +43,14 @@
           <button type="button" class="btn btn-default font-color-gray" onclick="location.href='notify.jsp'"> แจ้งคิวว่าง
             <span class="glyphicon glyphicon-chevron-right pull-right"></span>
           </button>
-          <button type="button" class="btn btn-default font-color-gray"> โทรจองโต๊ะ
+          <button type="button" class="btn btn-default font-color-gray" onclick="location.href='availabletable.jsp'"> โทรจองโต๊ะ
             <span class="glyphicon glyphicon-chevron-right pull-right"></span>
           </button>
           <button type="button" class="btn btn-default font-color-gray"> การจัดการโต๊ะ
             <span class="glyphicon glyphicon-chevron-right pull-right"></span>
           </button>
           <button type="button" class="btn btn-default font-color-gray"> การจัดการเมนู
-            <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+            <span class="glyphicon glyphicon-chevron-right pull-right" onclick="location.href='managemenu.jsp'"></span>
           </button>
           <button type="button" class="btn btn-default font-color-gray"> Inventory
             <span class="glyphicon glyphicon-chevron-right pull-right"></span>
