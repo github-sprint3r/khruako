@@ -40,16 +40,16 @@
 
         <!-- MENU -->
         <div class="btn-group-vertical btn-block sidebar-menu">
-          <button type="button" class="btn btn-default font-color-gray" onclick="location.href='notify.jsp'"> Queue Notification
+          <button type="button" class="btn btn-default font-color-gray" onclick="location.href='notify.jsp'"> แจ้งคิวว่าง
             <span class="glyphicon glyphicon-chevron-right pull-right"></span>
           </button>
-          <button type="button" class="btn btn-default font-color-gray"> Available Table
+          <button type="button" class="btn btn-default font-color-gray"> โทรจองโต๊ะ
             <span class="glyphicon glyphicon-chevron-right pull-right"></span>
           </button>
-          <button type="button" class="btn btn-default font-color-gray"> Manage Table
+          <button type="button" class="btn btn-default font-color-gray"> การจัดการโต๊ะ
             <span class="glyphicon glyphicon-chevron-right pull-right"></span>
           </button>
-          <button type="button" class="btn btn-default font-color-gray"> Manage Menu
+          <button type="button" class="btn btn-default font-color-gray"> การจัดการเมนู
             <span class="glyphicon glyphicon-chevron-right pull-right"></span>
           </button>
           <button type="button" class="btn btn-default font-color-gray"> Inventory
