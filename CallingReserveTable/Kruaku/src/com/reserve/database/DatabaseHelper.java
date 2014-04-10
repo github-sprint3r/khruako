@@ -8,9 +8,9 @@ public class DatabaseHelper {
 
 	public static final String HOST = "localhost";
 	public static final int PORT = 5432;
-	public static final String DATABASE_NAME = "sample";
+	public static final String DATABASE_NAME = "mykitchen";
 	public static final String DATABASE_USERNAME = "postgres";
-	public static final String DATABASE_PASSWORD = "password";
+	public static final String DATABASE_PASSWORD = "123456";
 
 	private static DatabaseHelper mInstance;
 	private String connectionURL = "jdbc:postgresql://" + HOST + ":" + PORT
