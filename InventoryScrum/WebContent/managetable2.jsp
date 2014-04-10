@@ -64,62 +64,40 @@
 
       </div>
 
-    <!-- CONTENT -->
+      <!-- CONTENT -->
       <div class="col-sm-8">
+        <div class="alert alert-success"><h4>Well done!</h4> You successfully read this important alert message.</div>
         <div class="font-color-gray">
           <p>
             </p><ul class="list-group">
               <li class="list-group-item">
-                <h3>การจัดการโต๊ะ</h3>
+                <h3>เพิ่มโต๊ะ</h3>
               </li>
               <li class="list-group-item">
-                <label>โต๊ะขนาด 2 ที่นั่ง</label>
-                <ul>
-                  <li>2-1</li>
-                  <li>2-2</li>
-                  <li>2-3</li>
-                  <li>2-4</li>
-                  <li>2-5</li>
-                  <li>2-6</li>
-                  <li>2-7</li>
-                  <li>2-8</li>
-                  <li>2-9</li>
-                  <li>2-10</li>
-                </ul>
-              </li>
-              <li class="list-group-item">
-                <label>โต๊ะขนาด 4 ที่นั่ง</label>
-                <ul>
-                  <li>4-1</li>
-                  <li>4-2</li>
-                  <li>4-3</li>
-                  <li>4-4</li>
-                  <li>4-5</li>
-                </ul>
-              </li>
-              <li class="list-group-item">
-                <label>โต๊ะขนาด 6 ที่นั่ง</label>
-              </li>
-              <li class="list-group-item">
-                <label>โต๊ะขนาด 8 ที่นั่ง</label>
-              </li>
-              <li class="list-group-item">
-                <label>โต๊ะขนาด 10 ที่นั่ง</label>
-                <ul>
-                  <li>10-1</li>
-                  <li>10-2</li>
-                </ul>
-              </li>
-              <li class="list-group-item">
-                <label>โต๊ะขนาด 12 ที่นั่ง</label>
+
+            <form action="http://119.59.97.10/khruako/viewtable.jsp">
+
+
+                    หมายเลขโต๊ะ :: 
+
+                <input id="table_name" type="text" name="table_name"></input>
+            </br>
+          </br>
+            จำนวนที่นั่ง ::
+                <select id="seat" name="seat">
+                <option value="2">2</option>
+                <option value="4">4</option>
+                <option value="6">6</option>
+                <option value="10">10</option>
+                <option value="12">12</option>
+                </select> 
+          </br>
+          </br>
+                <input class="btn btn-default" type="submit" value="สร้างโต๊ะ" name="submit_table" id="submit_table"></input>
+            </form>
               </li>
             </ul>
           <p></p>
         </div>
       </div>
-</div>
-<%@ page contentType="text/html; charset=utf-8" language="java"
-	import="java.sql.*" errorPage=""%>
-
-  </body>
-</html>
+<%@ include file="/footer.jsp" %>
