@@ -43,7 +43,7 @@
           <button type="button" class="btn btn-default font-color-gray" onclick="location.href='notify.jsp'"> Queue Notification
             <span class="glyphicon glyphicon-chevron-right pull-right"></span>
           </button>
-          <button type="button" class="btn btn-default font-color-gray"> Reserve Table
+          <button type="button" class="btn btn-default font-color-gray"> Available Table
             <span class="glyphicon glyphicon-chevron-right pull-right"></span>
           </button>
           <button type="button" class="btn btn-default font-color-gray"> Manage Table
