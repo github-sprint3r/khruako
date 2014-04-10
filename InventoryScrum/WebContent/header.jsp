@@ -49,7 +49,7 @@
           <button type="button" class="btn btn-default font-color-gray" onclick="location.href='reservetable.jsp'"> การจัดการโต๊ะ
             <span class="glyphicon glyphicon-chevron-right pull-right"></span>
           </button>
-          <button type="button" class="btn btn-default font-color-gray onclick="location.href='managemenucreate.jsp'""> การจัดการเมนู
+          <button type="button" class="btn btn-default font-color-gray" onclick="location.href='managemenucreate.jsp'"> การจัดการเมนู
             <span class="glyphicon glyphicon-chevron-right pull-right"></span>
           </button>
           <button type="button" class="btn btn-default font-color-gray" onclick="location.href='inventory.jsp'"> Inventory
