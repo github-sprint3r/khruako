@@ -27,6 +27,9 @@
 			if($("#Email").val() == "") {
 				alert("กรุณากรอก Email");
 			}
+			else if($("#Queue").val() == "") {
+				alert("กรุณาระบุคิว");
+			}
 			else if (!validateEmail($("#Email").val()))
 				alert("Email ไม่ถูกต้อง");
 			else {
@@ -34,20 +37,6 @@
 				if (tableNo == "0" || tableNo == "")
 					alert("กรุณาเลือกโต๊ะ");
 				else {
-					/*var Email = $("#Email").val();
-					var TableNo = $("#TableNo").val();
-					$.ajax({
-						url: '',
-						type: '',
-						async: false,
-						success: function(data) {
-							$("#Email").empty();
-							$(".btnTableNo").each(function() {
-								$(this).removeClass("active");
-							});
-							$("#TableNo").val("0");
-						}
-					});*/
 					$("#frmSendEmail").submit();
 				}
 			}
