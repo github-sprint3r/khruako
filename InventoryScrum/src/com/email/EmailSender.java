@@ -35,10 +35,10 @@ public class EmailSender {
 			message.setFrom(new InternetAddress("khruako@gmail.com"));
 			message.setRecipients(Message.RecipientType.TO,
 					InternetAddress.parse(email));
-			message.setSubject("�س�١��Ҥ�Ƿ�� "+ queueNo +" ��Тͧ�س���������");
+			message.setSubject("คุณลูกค้าคิวที่ "+ queueNo +" โต๊ะของคุณพร้อมแล้ว");
 			String body = 
-				"<p>���¹ �س�١��Ҥ�Ƿ�� {queue_no}.</p><br/>" +
-				"<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;��Тͧ�س�����Ţ {table_no}</p><br/><br/>" +
+				"<p>เรียน คุณลูกค้าคิวที่ {queue_no}.</p><br/>" +
+				"<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;โต๊ะของคุณหมายเลข {table_no}</p><br/><br/>" +
 				"{email}";
 			body = body.replace("{queue_no}", queueNo)
 					.replace("{table_no}", tableNo)
