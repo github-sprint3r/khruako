@@ -1,0 +1,58 @@
+body {
+  background-color: #88C9F9;
+}
+
+.navbar {
+  min-height: 35px;
+}
+
+.navbar-brand {
+  line-height: 5px;
+  height: 35px;
+}
+
+.container {
+  margin-bottom: 20px;
+}
+
+/* Sidebar */
+.sidebar-module {
+  padding: 15px;
+  margin: 0 -15px 15px;
+}
+
+.sidebar-account {
+  padding: 15px;
+  border-radius: 4px;
+  background-color: #fcfcfc;
+}
+
+.sidebar-menu {
+  margin-top: 15px;
+}
+
+.sidebar-footer {
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+/* Alert*/
+.alert {
+margin-bottom: 15px;
+}
+
+/* Content */
+.content {
+  padding: 15px;
+  border-radius: 4px;
+}
+
+/* Color */
+.bg-white {
+  background-color: #fcfcfc;
+}
+
+.font-color-gray {
+  color: #777;
+}
