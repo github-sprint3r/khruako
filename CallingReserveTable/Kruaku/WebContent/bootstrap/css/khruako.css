@@ -42,16 +42,6 @@ body {
 margin-bottom: 15px;
 }
 
-.alert-success {
-background-color: #BCF781;
-color: #111;
-}
-
-
-.alert h4 {
-color: #BF0E26;
-}
-
 /* Content */
 .content {
   padding: 15px;
