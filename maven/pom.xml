@@ -45,6 +45,7 @@
 						</includes>
 					</resource>
 				</webResources>
+				<packagingExcludes>WEB-INF/lib/javaee-api-6.0.jar</packagingExcludes>
 			</configuration>
 		</plugin>
  
