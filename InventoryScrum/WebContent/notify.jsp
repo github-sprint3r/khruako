@@ -27,6 +27,9 @@
 			if($("#Email").val() == "") {
 				alert("กรุณากรอก Email");
 			}
+			else if($("#Queue").val() == "") {
+				alert("กรุณาระบุคิว");
+			}
 			else if (!validateEmail($("#Email").val()))
 				alert("Email ไม่ถูกต้อง");
 			else {
@@ -34,20 +37,6 @@
 				if (tableNo == "0" || tableNo == "")
 					alert("กรุณาเลือกโต๊ะ");
 				else {
-					/*var Email = $("#Email").val();
-					var TableNo = $("#TableNo").val();
-					$.ajax({
-						url: '',
-						type: '',
-						async: false,
-						success: function(data) {
-							$("#Email").empty();
-							$(".btnTableNo").each(function() {
-								$(this).removeClass("active");
-							});
-							$("#TableNo").val("0");
-						}
-					});*/
 					$("#frmSendEmail").submit();
 				}
 			}
@@ -57,7 +46,12 @@
 	function validateEmail(email) { 
 	    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 	    return re.test(email);
-	} 
+	}
+	function CheckNum(){
+		if (event.keyCode < 48 || event.keyCode > 57 || event.keyCode == 8){
+		      event.returnValue = false;
+	    	}
+	}
 </script>
 
 <style>
@@ -78,8 +72,16 @@
 					<div class="col-md-4 text-right">
 						<label for="Email">Email :</label>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-5">
 						<input type="text" class="input-sm form-control" name="Email" id="Email" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-md-4 text-right">
+						<label for="Queue">Queue :</label>
+					</div>
+					<div class="col-md-5">
+						<input type="text" class="input-sm form-control" name="Queue" id="Queue" maxlength="4" onkeypress="CheckNum()" />
 					</div>
 				</div>
 				<div class="form-group">
